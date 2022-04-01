@@ -1,7 +1,7 @@
 @extends('layouts.base')
 
 @section('pageTitle'), 
-    {{$fumetto->title}})
+    {{$fumetto->series}})
 @endsection
 
 @section('content')
