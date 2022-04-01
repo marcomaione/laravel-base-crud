@@ -27,6 +27,9 @@
                 <td>{{$fumetto->sale_date}}</td>
                 <td>{{$fumetto->description}}</td>
                 <td>{{$fumetto->price}}</td>
+                <td>
+                <a class="btn btn-primary" href="{{route('fumetto.show', $fumetto->title)}}" role="button">view</a>
+                </td>
             </tr>
         @endforeach
     </tbody>
