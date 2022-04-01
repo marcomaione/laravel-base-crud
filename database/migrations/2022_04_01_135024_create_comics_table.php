@@ -23,6 +23,7 @@ class CreateComicsTable extends Migration
             $table->decimal('price', 4,3);
             $table->date('sale_date', 'Y-m-d');
             $table->text('description');
+            
             $table->timestamps();
         });
     }
