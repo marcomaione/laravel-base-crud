@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\comicBook;
 use Illuminate\Http\Request;
 
 class TestController extends Controller
@@ -13,7 +14,8 @@ class TestController extends Controller
      */
     public function index()
     {
-        //
+        $fumetti = comicBook::all();
+        return view('fumetto.index', compact('fumetti'));
     }
 
     /**

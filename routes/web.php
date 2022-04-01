@@ -17,4 +17,4 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::resource('test','testController');
+Route::resource('fumetto','testController');
