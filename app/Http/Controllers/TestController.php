@@ -45,9 +45,17 @@ class TestController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($title)
     {
-        //
+        $comic = comicBook::find($title);
+
+        if ($comic) {
+
+            return view('fumetto.show',compact('fumetto'));
+
+        }else {
+            abort(404);
+        }
     }
 
     /**
