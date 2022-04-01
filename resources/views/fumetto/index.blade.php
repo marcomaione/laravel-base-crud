@@ -18,13 +18,17 @@
         </tr>
     </thead>
     <tbody>
-        
-        <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-        </tr>
+        @foreach ($fumetti as $fumetto)
+            <tr>
+                <th><img src="{{$fumetto->thumb}}" alt=""></th></th>
+                <td>{{$fumetto->title}}</td>
+                <td>{{$fumetto->type}}</td>
+                <td>{{$fumetto->series}}</td>
+                <td>{{$fumetto->sale_date}}</td>
+                <td>{{$fumetto->description}}</td>
+                <td>{{$fumetto->price}}</td>
+            </tr>
+        @endforeach
     </tbody>
     </table>
 </div>
