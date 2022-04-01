@@ -1,16 +1,16 @@
 @extends('layouts.base')
 
-@section('pageTitle', {{$fumetto->title}})
+@section('pageTitle', {{$comic->title}})
 
 @section('content')
-<div class="container">
-        <img src="{{$fumetto->thumb}}" alt="">
-        <h1>{{$fumetto->title}}</h1>
-        <h2>{{$fumetto->type}}</h2>
-        <h3>{{$fumetto->series}}</h3>
-        <h4>{{$fumetto->sale_date}}</h4>
-        <h5>{{$fumetto->description}}</h5>
-        <h6>{{$fumetto->price}}</h6>
-</div>
+    <div class="container">
+            <img src="{{$comic->thumb}}" alt="">
+            <h1>{{$comic->title}}</h1>
+            <h2>{{$comic->type}}</h2>
+            <h3>{{$comic->series}}</h3>
+            <h4>{{$comic->sale_date}}</h4>
+            <h5>{{$comic->description}}</h5>
+            <h6>{{$comic->price}}</h6>
+    </div>
 
 @endsection
