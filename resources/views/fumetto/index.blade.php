@@ -8,6 +8,7 @@
     <table class="table">
     <thead>
         <tr>
+            <a class="btn btn-warning" href="{{route('fumetto.create', $fumetto->id)}}" role="button">create</a>
             <th scope="col">immagine</th>
             <th scope="col">titolo</th>
             <th scope="col">tipo</th>
