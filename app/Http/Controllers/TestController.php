@@ -36,7 +36,15 @@ class TestController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+
+        $fumetto = new comicBook();
+        $fumetto->title = $data['title'];
+        $fumetto->type = $data['type'];
+        $fumetto->series = $data['series'];
+        $fumetto->description = $data['description'];
+        $fumetto->price = $data['price'];
+        $fumetto->save();
     }
 
     /**

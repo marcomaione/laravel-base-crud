@@ -8,7 +8,7 @@
     <table class="table">
     <thead>
         <tr>
-            <a class="btn btn-warning" href="{{route('fumetto.create', $fumetto->id)}}" role="button">create</a>
+
             <th scope="col">immagine</th>
             <th scope="col">titolo</th>
             <th scope="col">tipo</th>
@@ -30,6 +30,7 @@
                 <td>{{$fumetto->price}}</td>
                 <td>
                 <a class="btn btn-primary" href="{{route('fumetto.show', $fumetto->id)}}" role="button">view</a>
+                <a class="btn btn-warning" href="{{route('fumetto.create', $fumetto->id)}}" role="button">create</a>
                 </td>
             </tr>
         @endforeach
