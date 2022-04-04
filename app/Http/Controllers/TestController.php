@@ -39,12 +39,20 @@ class TestController extends Controller
         $data = $request->all();
 
         $fumetto = new comicBook();
+        /*
+        $fumetto->thumb = $data['thumb'];
         $fumetto->title = $data['title'];
         $fumetto->type = $data['type'];
         $fumetto->series = $data['series'];
+        $fumetto->sale_date = $data['sale_date'];
         $fumetto->description = $data['description'];
         $fumetto->price = $data['price'];
+        */
+        $fumetto->fill($data);
+        
         $fumetto->save();
+
+        return redirect()->route('fumetto.show', ['fumetto' => $fumetto->id]);
     }
 
     /**
