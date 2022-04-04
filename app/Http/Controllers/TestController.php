@@ -121,8 +121,10 @@ class TestController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(comicBook $fumetto)
     {
-        //
+        $fumetto->delete();
+
+        return redirect()->route('fumetto.index')->with('status', 'Elemento correttamente cancellato');
     }
 }
