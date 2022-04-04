@@ -82,7 +82,13 @@ class TestController extends Controller
      */
     public function edit($id)
     {
-        //
+        $fumetto = comicBook::find($id);
+
+        if($fumetto) {
+            return view('fumetto.edit', compact('fumetto'));
+        } else {
+            abort(404);
+        }
     }
 
     /**
