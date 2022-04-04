@@ -1,4 +1,4 @@
-ends('layouts.base')
+@extends('layouts.base')
 
 @section('pageTitle')
 
@@ -24,9 +24,9 @@ ends('layouts.base')
             </div>
             <div class="mb-3">
                 <div class="form-floating">
-                    <select class="form-select" id="type" value="{{$fumetto->type}}">
-                        <option value="Comic book">Comic book</option>
-                        <option value="Graphic novel">Graphic novel</option>
+                    <select class="form-select" id="type" name="type">
+                        <option {{($fumetto->type == 'Comic book') ? 'selected' : ''}} value="Comic book">Comic book</option>
+                        <option {{($fumetto->type == 'Graphic novel') ? 'selected' : ''}} value="Graphic novel">Graphic novel</option>
                     </select>
                     <label for="floatingSelect">tipo</label>
                 </div>
