@@ -36,6 +36,23 @@ class TestController extends Controller
      */
     public function store(Request $request)
     {
+
+        $request->validate(
+
+            [
+                'thumb' => 'required|url',
+                'title' => 'required|min:5',
+                'type' => 'required|min:5',
+                'series' => 'required|min:5',
+                'sale_date' => '',
+                'description' => 'required|min:20',
+                'price' => ''
+            ]
+
+        );
+
+
+
         $data = $request->all();
 
         $fumetto = new comicBook();
