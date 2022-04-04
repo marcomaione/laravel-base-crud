@@ -49,7 +49,7 @@ class TestController extends Controller
         $fumetto->price = $data['price'];
         */
         $fumetto->fill($data);
-        
+
         $fumetto->save();
 
         return redirect()->route('fumetto.show', ['fumetto' => $fumetto->id]);
@@ -92,9 +92,21 @@ class TestController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, comicBook $fumetto)
     {
-        //
+        $data = $request->all();
+
+        $fumetto->thumb = $data['thumb'];
+        $fumetto->title = $data['title'];
+        $fumetto->type = $data['type'];
+        $fumetto->series = $data['series'];
+        $fumetto->sale_date = $data['sale_date'];
+        $fumetto->description = $data['description'];
+        $fumetto->price = $data['price'];
+
+        $fumetto->save();
+
+        return redirect()->route('fumetto.show',$fumetto->id);
     }
 
     /**
