@@ -32,7 +32,7 @@
                     <a class="btn btn-primary" href="{{route('fumetto.show', $fumetto->id)}}" role="button">view</a>
                     <a class="btn btn-warning" href="{{route('fumetto.create', $fumetto->id)}}" role="button">create</a>
                     <a class="btn btn-secondary" href="{{route('fumetto.edit', $fumetto->id)}}" role="button">modifica</a>
-                    <form method="POST" action="{{route('fumetto.destroy', ['fumetto' => $fumetto->id])}}">
+                    <form method="POST" action="{{route('fumetto.destroy', ['fumetto' => $fumetto->id])}}" onclick = "return checkDelete()">
                         @csrf
                         @method('DELETE')
                         <button type="submit" class="btn btn-danger">elimina</button>
@@ -43,5 +43,7 @@
     </tbody>
     </table>
 </div>
+
+<script src="{{asset('js/app.js')}}"></script>
 
 @endsection
